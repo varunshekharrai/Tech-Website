@@ -1,0 +1,56 @@
+.slider .indicators .indicator-item.active{
+	background-color: #4fc3f7;
+}
+.descimg{
+	object-fit: contain;
+}
+.descp{
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+.p-container{
+	min-height: 100px;
+	height: 400px;
+}
+.card-cont{
+	width: 400px !important;
+}
+.carousel{
+	margin-bottom: 5%;
+}
+.footer-one{
+	background-color: #2196f3;
+}
+.log{
+	margin: 5%;
+}
+.tabs .tab a:hover, .tabs .tab a.active{
+	color: #42a5f5;
+}
+.tabs .tab a:focus, .tabs .tab a:focus.active{
+	background-color: #bbdefb;
+}
+.tabs .indicator{
+	background-color: #1e88e5;
+}
+.tabs .tab a{
+	color: #2196f3;
+}
+.service-card{
+	max-height: 400px;
+}
+#signBtn{
+	color: white;
+}
+#commentBtn{
+	color: white;
+}
+@media only screen and (max-width: 1024px){
+	.p-container{
+		min-height: 100px;
+		height: 200px;
+	}
+	.carousel{
+		margin-bottom: 15%;
+	}
+}
