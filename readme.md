@@ -27,13 +27,13 @@ sudo apt-get install phpmyadmin
 Go to [phpmyadmin](localhost/phpmyadmin) and create a database with name "tech". Then go to that database and import "tech.sql" file. Change the slq url, user and password in "db.php".
 ## Open website in browser using
 [Localhost](localhost/tech)
-# Information
+## Information
 This is a basic website created by Varun Shekhar Rai.
-## Features
+### Features
 Read Blogs, Creating new Blogs, Comment on Blogs, Login, Signup.
-## Pages
+### Pages
 This website has three main pages Home, Blog, Services. Other supporting page is Login page which includes Signup and Login feature.
-## Website Type
+### Website Type
 This website is a dynamic website with backend in PHP with database in MySql and frontend is in Materialize framework.
-## Purpose
+### Purpose
 For the purpose of email acquisition a person can't read a blog without Login or Signup.
