@@ -108,12 +108,10 @@ if(isset($_POST["commentSubmit"])){
 								$rescom = mysqli_query($con,$comment);
 								$flag = 0;
 								while($rowcom = mysqli_fetch_assoc($rescom)){
-									if($flag==0){
-										echo "<div class=''>
-											<span><h5 class='header'>Comments:</h5></span>
-										</div>";
-										$flag++;
-									}
+									jfadklsjfkljlgdahkhdsahfioequweruioeqwuoudasfjasdf
+									asdfasdjflkadsjlk;fjlkadjsfjldksajfkljsdkafjdsa
+									asdfjkladsjfkladsjfkljdaslkjfklasdjf;daskf
+									asdjfkljasdklfjasdflj;
 									$comuser = "SELECT name FROM login WHERE uid = ".$rowcom["uid"]."";
 									$rescomuser = mysqli_query($con,$comuser);
 									while($rowcomuser = mysqli_fetch_assoc($rescomuser)){
