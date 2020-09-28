@@ -106,10 +106,14 @@ if(isset($_POST["commentSubmit"])){
 													</div></div>";
 								$comment = "SELECT * FROM comment WHERE bid = ".$row["bid"]."";
 								$rescom = mysqli_query($con,$comment);
+								$flag = 0;
 								while($rowcom = mysqli_fetch_assoc($rescom)){
+									if($flag==0){
 									echo "<div class=''>
 										<span><h5 class='header'>Comments:</h5></span>
 									</div>";
+									$flag++;
+									}
 									$comuser = "SELECT name FROM login WHERE uid = ".$rowcom["uid"]."";
 									$rescomuser = mysqli_query($con,$comuser);
 									while($rowcomuser = mysqli_fetch_assoc($rescomuser)){
