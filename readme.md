@@ -19,7 +19,7 @@ sudo mysql_secure_installation
 ```bash
 sudo apt-get install phpmyadmin
 ```
-## Put files in directory
+### Put files in directory
 ```bash
 /var/www/html
 ```
