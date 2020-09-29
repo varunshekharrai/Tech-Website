@@ -1,6 +1,5 @@
 <?php
 session_start();
-unset($_SESSION["bid"]);
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

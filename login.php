@@ -1,6 +1,5 @@
 <?php
 session_start();
-unset($_SESSION["bid"]);
 if(isset($_SESSION["uid"])){
  header("location:index.php");
 }

@@ -7,11 +7,11 @@ if(!isset($_SESSION["uid"])){
 <?php
 include ('db.php');
 if(isset($_POST["commentSubmit"])){
-		$newComm="INSERT INTO `comment`(`bid`, `uid`, `comm`) VALUES ('".$_SESSION["bid"]."','".$_SESSION["uid"]."','$_POST[commenttext]')";
+		$newComm="INSERT INTO `comment`(`bid`, `uid`, `comm`) VALUES ('".$_GET["bid"]."','".$_SESSION["uid"]."','$_POST[commenttext]')";
 		echo $newComm;
 		if(mysqli_query($con,$newComm))
 		{
-			header("location:oneblog.php?bid=".$_SESSION["bid"]."");
+			header("location:oneblog.php?bid=".$_GET["bid"]."");
 		}
 		else
 		{
@@ -89,7 +89,6 @@ if(isset($_POST["commentSubmit"])){
 			<div class="container row">
 				<?php
 					$blog="SELECT * FROM blog WHERE bid = ".$_GET["bid"]."";
-					$_SESSION["bid"]=$_GET["bid"];
 					$rs = mysqli_query($con,$blog);
 					while($row = mysqli_fetch_assoc($rs)){
 						$user = "SELECT name FROM login WHERE uid = ".$row["uid"]."";
@@ -108,10 +107,12 @@ if(isset($_POST["commentSubmit"])){
 								$rescom = mysqli_query($con,$comment);
 								$flag = 0;
 								while($rowcom = mysqli_fetch_assoc($rescom)){
-									jfadklsjfkljlgdahkhdsahfioequweruioeqwuoudasfjasdf
-									asdfasdjflkadsjlk;fjlkadjsfjldksajfkljsdkafjdsa
-									asdfjkladsjfkladsjfkljdaslkjfklasdjf;daskf
-									asdjfkljasdklfjasdflj;
+									if($flag==0){
+										echo "<div class=''>
+											<span><h5 class='header'>Comments:</h5></span>
+										</div>";
+										$flag++;
+									}
 									$comuser = "SELECT name FROM login WHERE uid = ".$rowcom["uid"]."";
 									$rescomuser = mysqli_query($con,$comuser);
 									while($rowcomuser = mysqli_fetch_assoc($rescomuser)){
@@ -123,7 +124,7 @@ if(isset($_POST["commentSubmit"])){
 							}
 					}
 				?>
-				<form id="commentid" class="col s12" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+				<form id="commentid" class="col s12" method="post" action="<?php echo "oneblog.php?bid=".$_GET["bid"]."";?>">
 					<div class="row">
 						<div class='input-field col s12'>
 							<i class='material-icons prefix' style='color: black;'>comment</i>
