@@ -24,9 +24,9 @@ sudo apt-get install phpmyadmin
 /var/www/html
 ```
 ### Import SQL file
-Go to [phpmyadmin](localhost/phpmyadmin) and create a database with name "tech". Then go to that database and import "tech.sql" file. Change the slq url, user and password in "db.php".
+Go to [phpmyadmin](http://localhost/phpmyadmin) and create a database with name "tech". Then go to that database and import "tech.sql" file. Change the slq url, user and password in "db.php".
 ## Open website in browser using
-[Localhost](localhost/tech)
+[Localhost](http://localhost/tech/)
 ## Information
 This is a basic website created by Varun Shekhar Rai.
 ### Features
